@@ -1,0 +1,1 @@
+FLASK_APP=beer/app.py flask run
