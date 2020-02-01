@@ -36,6 +36,9 @@ mapkey = os.environ.get('MAPKEY', '') or "CREATE MAPKEY ENV"
 
 from flask_sqlalchemy import SQLAlchemy
 
+#Variables to AWS 
+SQLALCHEMY_DATABASE_URI = ‘mysql+pymysql://<db_user>:<db_password>@<endpoint>/<db_url>’
+
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/nyc.sqlite"
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db/nyc.sqlite"
 db = SQLAlchemy(app)
