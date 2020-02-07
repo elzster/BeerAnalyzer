@@ -59,9 +59,9 @@ def scope():
 @app.route("/analyst/")
 def analyst():
     return render_template("analyst.html")
-@app.route("/contact/")
-def contact():
-    return render_template("contact.html")
+@app.route("/analysis/")
+def analysis():
+    return render_template("analysis.html")
 
 ##############################################
 ############Master Datafile Set ##############
