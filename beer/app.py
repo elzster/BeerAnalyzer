@@ -36,10 +36,11 @@ mapkey = os.environ.get('MAPKEY', '') or "CREATE MAPKEY ENV"
 
 from flask_sqlalchemy import SQLAlchemy
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/nyc.sqlite"
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db/nyc.sqlite"
+#Database Variables
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/brew.sqlite"
+
 db = SQLAlchemy(app)
-from .models import beer
+from .models import beerdata
 Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 
@@ -48,9 +49,19 @@ Base.prepare(db.engine, reflect=True)
 ###############################################
 ####Landing Page####
 @app.route("/")
-def home():
+def index():
 
     return render_template("index.html")
+
+@app.route("/scope/")
+def scope():
+    return render_template("scope.html")
+@app.route("/analyst/")
+def analyst():
+    return render_template("analyst.html")
+@app.route("/analysis/")
+def analysis():
+    return render_template("analysis.html")
 
 ##############################################
 ############Master Datafile Set ##############
