@@ -69,7 +69,10 @@ def analyst():
 def analysis():
     return render_template("analysis.html")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> elie
 
 # @app.route('/form/')
 # def my_form():
@@ -145,6 +148,9 @@ def beer_parameter():
     
     return render_template('form1.html', parameter=parameter)
 
+<<<<<<< HEAD
+>>>>>>> elie
+=======
 >>>>>>> elie
 
 #Testing (Route is Hard Coded)
