@@ -62,21 +62,52 @@ def index():
 @app.route("/scope/")
 def scope():
     return render_template("scope.html")
+
 @app.route("/analyst/")
 def analyst():
     return render_template("analyst.html")
+
 @app.route("/analysis/")
 def analysis():
     return render_template("analysis.html")
 
-# @app.route('/form/')
-# def my_form():
-#     return render_template('form.html')
+@app.route("/sentiment/")
+def sentiment():
+    return render_template("sentiment.html")
 
 
-# @app.route('/function/<parameter>')
-# def similarity_model(parameter):
-#     cd = os.getcwd()
+#Testing (Route is Hard Coded)
+@app.route('/beer/', defaults={'beer': 'Wachusett Larry'})
+@app.route('/beer/<beer>')
+def beer_input(beer):
+
+    df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
+    count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
+    cosine_sim = cosine_similarity(count_matrix)
+    cosine_sim.shape
+    beer_user_likes = (beer)
+    beer_index = get_index_from_title(beer_user_likes)
+    similar_beers = list( enumerate(cosine_sim[beer_index]) )
+    sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)[1:]
+    i=0
+    beer_dict = []
+    sim_score = []
+    print(f"The top 5 beers similar to {beer_user_likes} are: ")
+    for i in range(len(sorted_similar_beers)):
+        beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
+        sim_score.append(sorted_similar_beers[i][1])
+        if i>=4:
+            break
+    result = (dict(zip(beer_dict, sim_score)))
+
+    return render_template("form2.html", result=result)
+
+# @app.route('/testing/?thingichange=elland+back/')
+# def dash():
+
+#     # string= parameter.split('?beer=')
+#     # beer = string[1].replace('+',"%20")
+#     parameter='Elland Back'
 #     df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
 #     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
 #     cosine_sim = cosine_similarity(count_matrix)
@@ -94,83 +125,10 @@ def analysis():
 #         sim_score.append(sorted_similar_beers[i][1])
 #         if i>=4:
 #             break
-#     mydict = (dict(zip(beer_dict, sim_score)))
+#     result = (dict(zip(beer_dict, sim_score)))
     
-#     return (mydict)
-
-
-
-
-
-# @app.route('/beer/')
-# def form():
-#     return render_template('form.html',result=result)
-
-
-#Testing (Route is Hard Coded)
-@app.route('/beer/')
-def input():
-
-    # beer_variable = parameter.upper()
-    parameter='Wachusett Larry'
-    df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
-    count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
-    cosine_sim = cosine_similarity(count_matrix)
-    cosine_sim.shape
-    beer_user_likes = (parameter)
-    beer_index = get_index_from_title(beer_user_likes)
-    similar_beers = list( enumerate(cosine_sim[beer_index]) )
-    sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)[1:]
-    i=0
-    beer_dict = []
-    sim_score = []
-    print(f"The top 5 beers similar to {beer_user_likes} are: ")
-    for i in range(len(sorted_similar_beers)):
-        beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
-        sim_score.append(sorted_similar_beers[i][1])
-        if i>=4:
-            break
-    result = (dict(zip(beer_dict, sim_score)))
-    
-    return render_template("form.html", result=result)
-
-###Testing    
-# parameter = ''
-@app.route('/signup/', methods=['POST']) 
-def beer_parameter():
-    parameter = request.form['email']
-    print("The parameter is '" + parameter + "'")
-    
-    return render_template('form1.html', parameter=parameter)
-
-
-#Testing (Route is Hard Coded)
-@app.route('/testing/')
-def input1():
-    # parameter = resultfunction(form)
-    # parameter = request.form['text']
-    # beer_variable = parameter.upper()
-    parameter='Wachusett Larry'
-    df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
-    count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
-    cosine_sim = cosine_similarity(count_matrix)
-    cosine_sim.shape
-    beer_user_likes = (parameter)
-    beer_index = get_index_from_title(beer_user_likes)
-    similar_beers = list( enumerate(cosine_sim[beer_index]) )
-    sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)[1:]
-    i=0
-    beer_dict = []
-    sim_score = []
-    print(f"The top 5 beers similar to {beer_user_likes} are: ")
-    for i in range(len(sorted_similar_beers)):
-        beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
-        sim_score.append(sorted_similar_beers[i][1])
-        if i>=4:
-            break
-    result = (dict(zip(beer_dict, sim_score)))
-    
-    return render_template("form2.html", result=result)
+#     return render_template("form2.html", result=result)
+    # return parameter
 
 
 

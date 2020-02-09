@@ -15,9 +15,9 @@
 
 $( document ).ready(function() {
   var viz, workbook, activeSheet;
-  var placeholderDiv = document.getElementById("tableauViz");
+  var placeholderDiv = document.getElementById("tableauViz1");
  
-  var url = "https://public.tableau.com/views/BeerAnalysis_15812163851300/ExploratoryAnalysis?:display_count=y&publish=yes&:origin=viz_share_link";
+  var url = "https://public.tableau.com/views/BeerReviewSentiment_15812851362230/Story1?:display_count=y&publish=yes&:origin=viz_share_link";
   
   var options = {
     width: "10000px",
