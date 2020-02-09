@@ -17,10 +17,11 @@ $( document ).ready(function() {
   var viz, workbook, activeSheet;
   var placeholderDiv = document.getElementById("tableauViz");
  
-  var url = "https://public.tableau.com/profile/jean.p1562#!/vizhome/BeerAnalysisProject2/ExploratoryAnalysis";
+  var url = "https://public.tableau.com/views/BeerAnalysis_15812163851300/ExploratoryAnalysis?:display_count=y&publish=yes&:origin=viz_share_link";
+  
   var options = {
-    width: "100%",
-    height: "600px",
+    width: "7000px",
+    height: "7000px",
     hideTabs: true,
     hideToolbar: true,
     onFirstInteractive: function () {

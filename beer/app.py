@@ -136,7 +136,7 @@ def input():
 
 ###Testing    
 # parameter = ''
-@app.route('/signup', methods=['GET', 'POST']) 
+@app.route('/signup/', methods=['POST']) 
 def beer_parameter():
     parameter = request.form['email']
     print("The parameter is '" + parameter + "'")
@@ -150,7 +150,7 @@ def input1():
     # parameter = resultfunction(form)
     # parameter = request.form['text']
     # beer_variable = parameter.upper()
-    # parameter='Wachusett Larry'
+    parameter='Wachusett Larry'
     df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
     cosine_sim = cosine_similarity(count_matrix)
@@ -171,6 +171,12 @@ def input1():
     result = (dict(zip(beer_dict, sim_score)))
     
     return render_template("form2.html", result=result)
+
+
+
+
+
+
 ##############################################  
 ############Master Datafile Set ##############
 # ##############################################
