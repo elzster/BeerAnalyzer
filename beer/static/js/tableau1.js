@@ -18,7 +18,10 @@ $( document ).ready(function() {
   var placeholderDiv = document.getElementById("tableauViz");
  
   var url = "https://public.tableau.com/profile/jean.p1562#!/vizhome/BeerAnalysisProject2/ExploratoryAnalysis";
+<<<<<<< HEAD
 
+=======
+>>>>>>> elie
   var options = {
     width: "100%",
     height: "600px",

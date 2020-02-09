@@ -70,7 +70,10 @@ def analysis():
     return render_template("analysis.html")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> elie
 =======
 >>>>>>> elie
 
@@ -149,6 +152,9 @@ def beer_parameter():
     return render_template('form1.html', parameter=parameter)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> elie
+=======
 >>>>>>> elie
 =======
 >>>>>>> elie
