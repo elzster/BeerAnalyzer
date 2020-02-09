@@ -1,197 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Beer Analyzer &mdash; Project 3    </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/animate.css">
-    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/static/css/aos.css">
+<head>
+  <title>Beer Analyzer &mdash; Project 3 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/animate.css">
+  <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/static/css/aos.css">
+
+  <link rel="stylesheet" href="/static/css/magnific-popup.css">
 
 
-    <link rel="stylesheet" href="/static/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="/static/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="/static/fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="/static/fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/fonts/flaticon/font/flaticon.css">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="/static/css/style.css">
-  </head>
-  <body>
-    
-    <header role="banner">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="/">Beer Analyzer</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
 
-          <div class="collapse navbar-collapse" id="navbarsExample05">
-            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/scope/">Scope
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/analysis/" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analysis</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="/analysis/">Dataset Overview</a>
-                  <a class="dropdown-item" href="/analysis/"">Regression Models</a>
-                  <a class="dropdown-item" href="/analysis/">Recommender</a>
-                </div>
-              </li>
-              <!-- <li class="nav-item">
+<body>
+
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Beer Analyzer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/scope/">Scope
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/analysis/" id="dropdown04" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Analysis</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="/analysis/">Dataset Overview</a>
+                <a class="dropdown-item" href="/sentiment/">Sentiment Analysis</a>
+                <a class="dropdown-item" href="/beer/">Recommender</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="/analyst/">Analyst Team</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="/analyst/">Analyst Team</a>
+            </li>
+          </ul>
 
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item cta-btn">
-                <a class="nav-link" href="https://github.com/elzster/project3">GitHub</a>
-              </li>
-            </ul>
-            
-          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item cta-btn">
+              <a class="nav-link" href="https://github.com/elzster/project3">GitHub</a>
+            </li>
+          </ul>
+
         </div>
-      </nav>
-    </header>
-    <!-- END header -->
-    
-    <div class="slider-wrap">
-      <section class="home-slider owl-carousel">
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+  <div class="slider-wrap">
+    <section class="home-slider owl-carousel">
 
 
-        <div class="slider-item" style="background-image: url('/static/img/beer1.png');">
-          
-          <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-              <div class="col-md-8 text-center col-sm-12 ">
-                <h1 data-aos="fade-up">Welcome to our Beer Analyzer App!</h1>
-                <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Here you'll find our beer analyzer app accompanied with lots of analysis to go along with it.</p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-white btn-outline-white">Let's Go!</a></p>
-              </div>
+      <div class="slider-item" style="background-image: url('/static/img/beer1.png');">
+
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 ">
+              <h1 data-aos="fade-up">Welcome to our Beer Analyzer App!</h1>
+              <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Here you'll find our beer analyzer app accompanied
+                with lots of analysis to go along with it.</p>
+              <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-white btn-outline-white">Let's
+                  Go!</a></p>
             </div>
           </div>
-
         </div>
 
-        <div class="slider-item" style="background-image: url('/static/img/beer2.png');">
-          <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-              <div class="col-md-8 text-center col-sm-12 ">
-                <h1 data-aos="fade-up">Our Analysis</h1>
-                <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Our Dataset Dives into the deep reviews of over 1.5 million reviews of beer based on Taste, Aroma, Look, and ABV%(Alcohol by Volume)
-                </p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-white btn-outline-white">Get Started</a></p>
-              </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url('/static/img/beer2.png');">
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 ">
+              <h1 data-aos="fade-up">Our Analysis</h1>
+              <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Our Dataset Dives into the deep reviews of over
+                1.5 million reviews of beer based on Taste, Aroma, Look, and ABV%(Alcohol by Volume)
+              </p>
+              <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-white btn-outline-white">Get
+                  Started</a></p>
             </div>
           </div>
-          
         </div>
 
-      </section>
+      </div>
+
+    </section>
     <!-- END slider -->
-    </div> 
+  </div>
 
-    <section class="section pb-0">
-      <div class="container">
-        <div class="row mb-5 justify-content-center" data-aos="fade">
-            <div class="col-md-7 text-center heading-wrap">
-              <h2 data-aos="fade-up">Data Process</h2>
-              <p data-aos="fade-up" data-aos-delay="100">We selected our Dataset with Reviews in Mind. Our dataset contains over 1.5 million reviews based on different criteria such as Taste, Aroma, ABV(Alcohol by Volume) and Color.<br> Below are some of the Libraries/Frameworks used in our analysis.</p>
-            </div>
-          </div>
-        <div class="row align-items-center">
-          <div class="col-lg-4">
-            <img src="/static/img/python.png" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="200">
-          </div>
-          <div class="col-lg-4">
-            <img src="/static/img/bs.png" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="300">
-            <img src="/static/img/ml.png" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="400">
-          </div>
-          <div class="col-lg-4">
-            <img src="/static/img/sklearn.svg" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="500">
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row mb-5 justify-content-center" data-aos="fade">
+        <div class="col-md-7 text-center heading-wrap">
+          <h2 data-aos="fade-up">Data Process</h2>
+          <p data-aos="fade-up" data-aos-delay="100">We selected our Dataset with Reviews in Mind. Our dataset contains
+            over 1.5 million reviews based on different criteria such as Taste, Aroma, ABV(Alcohol by Volume) and
+            Color.<br> Below are some of the Libraries/Frameworks used in our analysis.</p>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <img src="/static/img/python.png" alt="Image" class="img-fluid about_img_1" data-aos="fade"
+            data-aos-delay="200">
+        </div>
+        <div class="col-lg-4">
+          <img src="/static/img/bs.png" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="300">
+          <img src="/static/img/ml.png" alt="Image" class="img-fluid about_img_1" data-aos="fade" data-aos-delay="400">
+        </div>
+        <div class="col-lg-4">
+          <img src="/static/img/sklearn.svg" alt="Image" class="img-fluid about_img_1" data-aos="fade"
+            data-aos-delay="500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ">
+
+    <div class="clearfix mb-5 pb-5">
+      <div class="container-fluid mb-5">
+        <div class="row" data-aos="fade">
+          <div class="col-md-12 text-center heading-wrap">
+            <h2>Data Munging</h2>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section ">
-
-      <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid mb-5">
-          <div class="row" data-aos="fade">
-            <div class="col-md-12 text-center heading-wrap">
-              <h2>Data Munging</h2>
-            </div>
+      <div class="owl-carousel centernonloop">
+        <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="100">
+          <div class="text">
+            <p class="dishes-price">Step 1</p>
+            <h2 class="dishes-heading">Gather Our Data</h2>
           </div>
-        </div>
-        <div class="owl-carousel centernonloop">
-          <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="100">
-            <div class="text">
-              <p class="dishes-price">Step 1</p>
-              <h2 class="dishes-heading">Gather Our Data</h2>
-            </div>
-            <img src="/static/img/gather.png" alt="" class="img-fluid">
-          </a>
-          <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="200">
-            <div class="text">
-              <p class="dishes-price">Step 2</p>
-              <h2 class="dishes-heading">ETL</h2>
-            </div>
-            <img src="/static/img/etl.png" alt="" class="img-fluid">
-          </a>
-          <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="300">
-            <div class="text">
-              <p class="dishes-price">Step 3</p>
-              <h2 class="dishes-heading">Analysis/<br>Preprocessing</h2>
-            </div>
-            <img src="/static/img/process.svg" alt="" class="img-fluid">
-          </a>
-          <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="400">
-            <div class="text">
-              <p class="dishes-price">Step 4</p>
-              <h2 class="dishes-heading">Apply Our Machine Learning Models</h2>
-            </div>
-            <img src="/static/img/ml2.png" alt="" class="img-fluid">
-          </a>
-        </div>
+          <img src="/static/img/gather.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="200">
+          <div class="text">
+            <p class="dishes-price">Step 2</p>
+            <h2 class="dishes-heading">ETL</h2>
+          </div>
+          <img src="/static/img/etl.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="300">
+          <div class="text">
+            <p class="dishes-price">Step 3</p>
+            <h2 class="dishes-heading">Analysis/<br>Preprocessing</h2>
+          </div>
+          <img src="/static/img/process.svg" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="400">
+          <div class="text">
+            <p class="dishes-price">Step 4</p>
+            <h2 class="dishes-heading">Apply Our Machine Learning Models</h2>
+          </div>
+          <img src="/static/img/ml2.png" alt="" class="img-fluid">
+        </a>
       </div>
+    </div>
+    <div class="clearfix mb-5 pb-5">
+      <div class="container-fluid">
+        <div class="row" data-aos="fade">
+          <div class="col-md-12 text-center heading-wrap">
+            <h2>More About Our Project</h2>
 
-    </section>
-    
-    <section class="section pb-0">
-
-      <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
-          <div class="row" data-aos="fade">
-            <div class="col-md-12 text-center heading-wrap">
-              <h2>Onto the Data!</h2>
-              
-              <span class="back-text">Data</span>
-            </div>
+            <span class="back-text"><a href="/scope/">Scope</a></span>
           </div>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
+  </section>
+  <section class="section pb-0">
+    </div>
+    </div>
     </footer>
     <!-- END footer -->
 
     <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#cf1d16"/></svg></div>
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#cf1d16" /></svg></div>
 
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/popper.min.js"></script>
@@ -202,9 +213,10 @@
 
     <script src="/static/js/jquery.magnific-popup.min.js"></script>
     <script src="/static/js/magnific-popup-options.js"></script>
-    
+
 
     <script src="/static/js/main.js"></script>
-    
-  </body>
+
+</body>
+
 </html>
