@@ -39,7 +39,6 @@ pathspec==0.5.9
 protobuf==3.11.2
 psycopg2==2.8.4
 pyarrow==0.14.0
-pygpu==0.7.6
 pyparsing==2.4.6
 pypiwin32==223
 pyreadline==2.1
