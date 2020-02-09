@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # df_5000 = pd.read_csv('static/df500.csv')
 import os
 cd = os.getcwd()
-df_5000 = pd.read_csv(cd+"/beer/df500.csv")
+df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
 
 # Helper function to get the title from the index
 def get_title_from_index (index):
@@ -20,8 +20,8 @@ def get_index_from_title(beer_name):
     return df_5000[df_5000.beer_name == beer_name]["index"].values[0]
 
 def similarity_model(parameter):
-    # Convert a collection of text to a matrix of token counts
-    # df_5000 = pd.read_csv('static/df500.csv')
+    cd = os.getcwd()
+    df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
     cosine_sim = cosine_similarity(count_matrix)
     cosine_sim.shape
@@ -29,6 +29,16 @@ def similarity_model(parameter):
     beer_index = get_index_from_title(beer_user_likes)
     similar_beers = list( enumerate(cosine_sim[beer_index]) )
     sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)[1:]
+    i=0
+    beer_dict = []
+    sim_score = []
+    print(f"The top 5 beers similar to {beer_user_likes} are: ")
+    for i in range(len(sorted_similar_beers)):
+        beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
+        sim_score.append(sorted_similar_beers[i][1])
+        if i>=4:
+            break
+    result = (dict(zip(beer_dict, sim_score)))
 
 def print_statement(parameter):
     i=0
