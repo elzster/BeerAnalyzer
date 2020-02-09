@@ -17,7 +17,7 @@ $( document ).ready(function() {
   var viz, workbook, activeSheet;
   var placeholderDiv = document.getElementById("tableauViz");
  
-  var url = "https://public.tableau.com/views/BeerBooklet/AVGTotalReviews2?:display_count=y&:origin=viz_share_link";
+  var url = "https://public.tableau.com/profile/jean.p1562#!/vizhome/BeerAnalysisProject2/ExploratoryAnalysis";
   var options = {
     width: "100%",
     height: "600px",
