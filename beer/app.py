@@ -100,7 +100,7 @@ def beer_input(beer):
             break
     result = (dict(zip(beer_dict, sim_score)))
 
-    return render_template("form2.html", result=result)
+    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes)
 
 # @app.route('/testing/?thingichange=elland+back/')
 # def dash():
@@ -129,24 +129,6 @@ def beer_input(beer):
     
 #     return render_template("form2.html", result=result)
     # return parameter
-
-
-
-
-
-
-##############################################  
-############Master Datafile Set ##############
-# ##############################################
-# @app.route("/datafile1/")
-# def datafile1():
-#     """Return the list of records in Table"""
-#     # Use Pandas to perform the sql query
-#     stmt = db.session.query(crashdata).statement
-#     df = pd.read_sql_query(stmt, db.session.bind)
-
-#     json = df.to_json(orient='records')
-#     return (json)
 
 if __name__ == "__main__":
     app.run()
