@@ -81,6 +81,8 @@ def sentiment():
 @app.route('/beer/<beer>')
 def beer_input(beer):
 
+    beer
+    
     df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
     cosine_sim = cosine_similarity(count_matrix)
@@ -101,6 +103,49 @@ def beer_input(beer):
     result = (dict(zip(beer_dict, sim_score)))
 
     return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes)
+
+#Testing (Route is Hard Coded)
+@app.route('/beer/', methods=["POST"])
+def beer_input1():
+
+    beer = request.form['mybeer']
+    
+    df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
+    count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
+    cosine_sim = cosine_similarity(count_matrix)
+    cosine_sim.shape
+    beer_user_likes = (beer)
+    beer_index = get_index_from_title(beer_user_likes)
+    similar_beers = list( enumerate(cosine_sim[beer_index]) )
+    sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)[1:]
+    i=0
+    beer_dict = []
+    sim_score = []
+    print(f"The top 5 beers similar to {beer_user_likes} are: ")
+    for i in range(len(sorted_similar_beers)):
+        beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
+        sim_score.append(sorted_similar_beers[i][1])
+        if i>=4:
+            break
+    result = (dict(zip(beer_dict, sim_score)))
+
+    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes)
+
+
+##Will return the text that's input
+@app.route('/testroute/')
+def testroute():
+    return '''
+<form method="POST">
+    <input name="text">
+    <input type="submit">
+</form>'''
+
+@app.route('/testroute/', methods=['POST'])
+def my_form_post():
+    text = request.form['text']
+    processed_text = text.upper()
+    return ((processed_text))+" Likes Your Mom"
 
 # @app.route('/testing/?thingichange=elland+back/')
 # def dash():
