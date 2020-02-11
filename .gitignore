@@ -1,2 +1,7 @@
 ##to Ignore Files
+<<<<<<< HEAD
 .ipynb_checkpoints
+=======
+.ipynb_checkpoints
+beer/__pycache__/
+>>>>>>> master
