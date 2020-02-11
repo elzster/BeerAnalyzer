@@ -91,7 +91,7 @@
             </div>
             <section class="section bg-light pt-0 bottom-slant-gray">
                 
-                    <div class="col-md-12"><br></div>
+                    <!-- <div class="col-md-12"><br></div> -->
 
                     <div class="col-md-12">
                         <div class="row justify-content-md-center">
@@ -99,19 +99,22 @@
                                 <div class="container-fluid">
                                     <div class="row" data-aos="fade">
                                         <div class="col-md-12 text-center heading-wrap">
-                                            <h2>Top Five Beers Similar to {{ beer_user_likes }}</h2>
+                                            <h2>Top Five Beers Similar To: <br>
+                                                <u>{{ beer_user_likes }}</u></h2>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <h1>Top Five Beers Similar to {{ beer_user_likes }}</h1><br></div> -->
                     <div class="row">
-                        <div class="col-md-5"></div>
+                        <div class="col-md-4"></div>
                         <div class="row justify-content-md-center">
                             <table class="table table-striped">
-
+                                <tr>
+                                    <th><h3><u>Beer</u></h3></th>
+                                    <th><h3><u>Similarity Index</u></h3></th>
+                                </tr>
                                 {% for key, value in result.items() %}
                                 <tr>
                                     <th>{{ key }} </th>
