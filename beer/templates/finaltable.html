@@ -80,8 +80,6 @@
                             We developed a machine learning model that took the sample of the dataset and placed the
                             sample beers in a similarity matrix.<br>
                             Below is a table of Top Five Beers with a Default Beer Value set at 'Wachusett Larry'.
-                            <br>(Further Beers can be filtered into the Machine learning model by adding on another beer
-                            into the URL bar)
                         </p>
 
                         <br>
@@ -90,59 +88,64 @@
                 </div>
             </div>
             <section class="section bg-light pt-0 bottom-slant-gray">
-                
-                    <!-- <div class="col-md-12"><br></div> -->
 
-                    <div class="col-md-12">
-                        <div class="row justify-content-md-center">
-                            <div class="clearfix mb-5 pb-5">
-                                <div class="container-fluid">
-                                    <div class="row" data-aos="fade">
-                                        <div class="col-md-12 text-center heading-wrap">
-                                            <h2>Top Five Beers Similar To: <br>
-                                                <u>{{ beer_user_likes }}</u></h2>
-                                        </div>
+                <!-- <div class="col-md-12"><br></div> -->
+
+                <div class="col-md-12">
+                    <div class="row justify-content-md-center">
+                        <div class="clearfix mb-5 pb-5">
+                            <div class="container-fluid">
+                                <div class="row" data-aos="fade">
+                                    <div class="col-md-12 text-center heading-wrap">
+                                        <h2>Top Five Beers Similar To: <br>
+                                            <u>{{ beer_user_likes }}</u></h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="row justify-content-md-center">
-                            <table class="table table-striped">
-                                <tr>
-                                    <th><h3><u>Beer</u></h3></th>
-                                    <th><h3><u>Similarity Index</u></h3></th>
-                                </tr>
-                                {% for key, value in result.items() %}
-                                <tr>
-                                    <th>{{ key }} </th>
-                                    <td>{{ value }}</td>
-                                </tr>
-                                {% endfor %}
-                            </table>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="row justify-content-md-center">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    <h3><u>Beer</u></h3>
+                                </th>
+                                <th>
+                                    <h3><u>Similarity Index</u></h3>
+                                </th>
+                            </tr>
+                            {% for key, value in result.items() %}
+                            <tr>
+                                <th>{{ key }} </th>
+                                <td>{{ value }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
                     </div>
-                    <!-- <div class="row justify-content-md-center">
+                </div>
+                <!-- <div class="row justify-content-md-center">
                         <form method="POST">
                             <input name="mybeer">
                             <input type="submit">
                         </form>
                     </div> -->
-                    <div class="col-md-4-center">
+                <div class="col-md-4-center">
                     <div class="row justify-content-md-center">
                         <form method="POST">
-                        <select name="mybeer" onchange="this.form.submit()">
-                            {% for x,y in beerlist1.items() %}
-                            <option value= "{{ y }}">{{y}}</option>
-                            {% endfor %}
+                            <select name="mybeer" onchange="this.form.submit()">
+                                {% for x,y in beerlist1.items() %}
+                                <option value="{{ y }}">{{y}}</option>
+                                {% endfor %}
                             </select>
                         </form>
                     </div>
                 </div>
-                </div></section>
         </div>
+        </section>
+    </div>
     </div>
     <!-- </div> -->
     </section>

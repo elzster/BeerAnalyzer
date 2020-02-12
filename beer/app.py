@@ -150,7 +150,7 @@ def testroute():
 def my_form_post():
     text = request.form['text']
     processed_text = text.upper()
-    return ((processed_text))+" Likes Your Mom"
+    return ((processed_text))
 
 # @app.route('/testing/?thingichange=elland+back/')
 # def dash():
