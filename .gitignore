@@ -6,3 +6,5 @@ beer/__pycache__/__init__.cpython-36.pyc
 beer/__pycache__/app.cpython-36.pyc
 beer/__pycache__/__init__.cpython-36.pyc
 *.pyc
+*.pyc
+beer/__pycache__/app.cpython-36.pyc
