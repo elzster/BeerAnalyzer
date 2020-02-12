@@ -81,8 +81,9 @@ def sentiment():
 @app.route('/beer/<beer>')
 def beer_input(beer):
 
-    beer
-    
+    beerlist = pd.read_csv(cd+"/beer/static/df500.csv")
+    beerlist1 = beerlist['beer_name']
+
     df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
     cosine_sim = cosine_similarity(count_matrix)
@@ -102,7 +103,7 @@ def beer_input(beer):
             break
     result = (dict(zip(beer_dict, sim_score)))
 
-    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes)
+    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes, beerlist1=beerlist1)
 
 #Testing (Route is Hard Coded)
 @app.route('/beer/', methods=["POST"])
@@ -110,6 +111,10 @@ def beer_input1():
 
     beer = request.form['mybeer']
     
+    beerlist = pd.read_csv(cd+"/beer/static/df500.csv")
+    beerlist1 = beerlist['beer_name']
+    
+
     df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
     count_matrix = CountVectorizer().fit_transform(df_5000["combined_features"])
     cosine_sim = cosine_similarity(count_matrix)
@@ -129,7 +134,7 @@ def beer_input1():
             break
     result = (dict(zip(beer_dict, sim_score)))
 
-    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes)
+    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes, beerlist1=beerlist1)
 
 
 ##Will return the text that's input

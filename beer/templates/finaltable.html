@@ -124,12 +124,24 @@
                             </table>
                         </div>
                     </div>
-                    <div class="row justify-content-md-center">
+                    <!-- <div class="row justify-content-md-center">
                         <form method="POST">
                             <input name="mybeer">
                             <input type="submit">
                         </form>
+                    </div> -->
+                    <div class="col-md-4-center">
+                    <div class="row justify-content-md-center">
+                        <form method="POST">
+                        <select name="mybeer" onchange="this.form.submit()">
+                            {% for x,y in beerlist1.items() %}
+                            <option value= "{{ y }}">{{y}}</option>
+                            {% endfor %}
+                            </select>
+                        </form>
+                    </div>
                 </div>
+                </div></section>
         </div>
     </div>
     <!-- </div> -->
