@@ -17,7 +17,7 @@ from sqlalchemy import or_
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement, get_abv_from_index
+from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement, get_abv_from_index, get_beerstyle_from_index
 
 #################################################
 # Flask Setup
@@ -106,7 +106,7 @@ def beer_input(beer):
         beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
         sim_score.append(sorted_similar_beers[i][1])
         abv_score.append(get_abv_from_index(sorted_similar_beers[i][0]))
-        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])) }
+        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])), 'style':(get_beerstyle_from_index((sorted_similar_beers[i][0]))) }
         case_list.append(case)
         if i>=4:
             break
@@ -147,7 +147,7 @@ def beer_input1():
         beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
         sim_score.append(sorted_similar_beers[i][1])
         abv_score.append(get_abv_from_index(sorted_similar_beers[i][0]))
-        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])) }
+        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])), 'style':(get_beerstyle_from_index((sorted_similar_beers[i][0]))) }
         case_list.append(case)
         if i>=4:
             break

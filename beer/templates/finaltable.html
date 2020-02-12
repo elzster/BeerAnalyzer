@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 ">
-                        <h1 data-aos="fade-up">Recommender Model</h1>
+                        <h1 data-aos="fade-up"><a href='#table'>Recommender Model</a></h1>
                         <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Here is an example of our Recommender
                             App. For Demo Purposes we did have to take our machine model sample smaller for speed.
                             We developed a machine learning model that took the sample of the dataset and placed the
@@ -75,6 +75,7 @@
             </div>
             <section class="section bg-light pt-0 bottom-slant-gray">
                 <div class="col-md-12">
+                    <div id="table"></div>
                     <div class="row justify-content-md-center">
                         <div class="clearfix mb-5 pb-5">
                             <div class="container-fluid">
@@ -89,8 +90,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4"></div>
+                    <div class="col-md-3"></div>
                     <div class="row justify-content-md-center">
+                        
                         <table class="table table-striped">
                             <tr>
                                 <th>
@@ -102,6 +104,9 @@
                                 <th>
                                     <h3><u>ABV%</u></h3>
                                 </th>
+                                <th>
+                                    <h3><u>Beer Style</u></h3>
+                                </th>
                             </tr>
                             {% for i in case_list%}
 
@@ -109,6 +114,7 @@
                                 <th>{{ i.beer }} </th>
                                 <td>{{ i.similarity }}</td>
                                 <td>{{ i.abv }}</td>
+                                <td>{{ i.style }}</td>
                             </tr>
                             {% endfor %}
                         </table>
