@@ -1,5 +1,24 @@
-# project3
+# Project 3 - Beer Me!
 
-## Note: Under Construction
+## Beer Recommender Engine & Reviews Sentiment Analysis 
 
-### Don't forget to work under individual branches, Will have working filetree shortly...
+![header image](/images/welcome_page.png)
+
+The Team : <details>
+           <summary>Beer Analysts</summary>
+           <p> :small_orange_diamond: Christine Mazur</p>
+           <p> :small_orange_diamond: Elie Hakim</p>
+           <p> :small_orange_diamond: Jean Pino</p>
+           <p> :small_orange_diamond: Jonathan Rinko</p>
+           <p> :small_orange_diamond: Miguel Patxot</p>
+           <p> :small_orange_diamond: Nida Hussain</p>
+         </details>
+
+
+![header image](/images/our_mission_.png)
+
+![header image](/images/data_process.png)
+
+![header image](/images/ml_engine.png)
+
+This beer recommendation engine is built on collaborative-filtering approach. Since the review-rating matrix is very sparse, cosine similarity was suitable to calculate similarities between beers. This app recommends top 5 beers by taking user inputs and comparing against this pre-computed matrix.
