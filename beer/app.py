@@ -17,7 +17,7 @@ from sqlalchemy import or_
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement
+from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement, get_abv_from_index
 
 #################################################
 # Flask Setup
@@ -95,15 +95,25 @@ def beer_input(beer):
     i=0
     beer_dict = []
     sim_score = []
-    print(f"The top 5 beers similar to {beer_user_likes} are: ")
+    abv_score = []
+    beer = {}
+    beer['beer'] ={}
+    beer['similarity']={}
+    beer['abv']={}
+    case_list=[]
+    # print(f"The top 5 beers similar to {beer_user_likes} are: ")
     for i in range(len(sorted_similar_beers)):
         beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
         sim_score.append(sorted_similar_beers[i][1])
+        abv_score.append(get_abv_from_index(sorted_similar_beers[i][0]))
+        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])) }
+        case_list.append(case)
         if i>=4:
             break
     result = (dict(zip(beer_dict, sim_score)))
+    result2 = dict(zip(beer_dict, abv_score))
 
-    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes, beerlist1=beerlist1)
+    return render_template("finaltable.html", result=result, result2=result2, beer_user_likes=beer_user_likes, beerlist1=beerlist1, case_list=case_list)
 
 #Testing (Route is Hard Coded)
 @app.route('/beer/', methods=["POST"])
@@ -126,15 +136,25 @@ def beer_input1():
     i=0
     beer_dict = []
     sim_score = []
-    print(f"The top 5 beers similar to {beer_user_likes} are: ")
+    abv_score = []
+    beer = {}
+    beer['beer'] ={}
+    beer['similarity']={}
+    beer['abv']={}
+    case_list=[]
+    # print(f"The top 5 beers similar to {beer_user_likes} are: ")
     for i in range(len(sorted_similar_beers)):
         beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
         sim_score.append(sorted_similar_beers[i][1])
+        abv_score.append(get_abv_from_index(sorted_similar_beers[i][0]))
+        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])) }
+        case_list.append(case)
         if i>=4:
             break
     result = (dict(zip(beer_dict, sim_score)))
+    result2 = dict(zip(beer_dict, abv_score))
 
-    return render_template("finaltable.html", result=result, beer_user_likes=beer_user_likes, beerlist1=beerlist1)
+    return render_template("finaltable.html", result=result, result2=result2, beer_user_likes=beer_user_likes, beerlist1=beerlist1, case_list=case_list)
 
 
 ##Will return the text that's input

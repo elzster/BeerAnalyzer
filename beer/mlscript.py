@@ -15,6 +15,10 @@ df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
 def get_title_from_index (index):
     return df_5000[df_5000.index == index]["beer_name"].values[0]
 
+# Helper function to get the title from the index
+def get_abv_from_index (index):
+    return df_5000[df_5000.index == index]["beer_abv"].values[0]
+
 # # Helper function to get the index from the title
 def get_index_from_title(beer_name):
     return df_5000[df_5000.beer_name == beer_name]["index"].values[0]
@@ -44,7 +48,7 @@ def print_statement(parameter):
     i=0
     print(f"The top 5 beers similar to {beer_user_likes} are: ")
     for i in range( len(sorted_similar_beers)):
-        print('Beer Name:',get_title_from_index(sorted_similar_beers[i][0]), ', Similarity Score: ', sorted_similar_beers[i][1] )
+        print('Beer Name:',get_title_from_index(sorted_similar_beers[i][0]), ', Similarity Score: ', sorted_similar_beers[i][1].round(2) )
         i=i+1
         if i>=5:
             break
