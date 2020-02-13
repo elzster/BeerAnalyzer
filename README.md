@@ -1,4 +1,4 @@
-# <p align="center", style='color:red'> Project 3 - Beer Me...Something Different! </p>
+# <p align="center"> Project 3 - Beer Me...Something Different! </p>
 
 ### Beer Recommender Engine & Sentiment Analysis on Reviews
 
@@ -21,16 +21,16 @@ The Team : <details>
 ### :beer: Bartender: That's perfect! Take a look at our 'Beer Analyzer App'; I'm sure you can find a possibility of information and new choices based on what you already like!
 ### |-----------------------------------------------------------------------------------------|
 
-# Welcome to the 'Beer Analyzer App'!
+# <p align="center"> Welcome to the 'Beer Analyzer App'! </p>
 ![header image](/beer/readme_images/welcome_page.png)
 
-# Our Mission
+# <p align="center"> Our Mission </p>
 ![header image](/beer/readme_images/our_mission_.png)
 
-# Data Process | Clean Up
+# <p align="center"> Data Process | Clean Up </p>
 ![header image](/beer/readme_images/data_process.png)
 
-# Beer Review - Sentiment Analysis
+# <p align="center"> Beer Review - Sentiment Analysis </p>
 VADER - Valence Aware Dictionary for sEntiment Reasoning
 * 'Opinion Mining' or 'Quantifying the Emotion of a Word' 
 * Approximately 10k individual reviews web scraped using beautiful soup from 'Ratebeer.com' 
@@ -38,7 +38,7 @@ VADER - Valence Aware Dictionary for sEntiment Reasoning
 ![header image](/beer/readme_images/vader_top.png)
 ![header image](/beer/readme_images/vader_geo.png)
 
-# Beer Recommender Engine
+# <p align="center"> Beer Recommender Engine </p>
 ![header image](/beer/readme_images/recommender_v2.png)
 
 This beer recommendation engine is built on collaborative-filtering approach. Since the review-rating matrix is very sparse, cosine similarity was suitable to calculate similarities between beers. This app recommends top 5 beers by taking user inputs and comparing against this pre-computed matrix. 
