@@ -13,14 +13,14 @@
 ![header image](/beer/readme_images/welcome_page.png)
 
 The Team : <details>
-           <summary>Beer Analysts & Linkedin Profiles: </summary>
+           <summary>Beer Analysts & LinkedIn Profiles: </summary>
            <p> </p>
-           <p> :large_orange_diamond: [Christine Mazur](https://www.linkedin.com/in/christine-mazur-4b897425/) </p>
-           <p> :large_orange_diamond: [Elie Hakim](https://www.linkedin.com/in/hakime1/) </p>
-           <p> :large_orange_diamond: [Jean Pino](https://www.linkedin.com/in/jeancpino/) </p>
-           <p> :large_orange_diamond: [Jonathan Rinko](https://www.linkedin.com/in/jonathan-rinko/) </p>
-           <p> :large_orange_diamond: [Miguel Patxot](https://www.linkedin.com/in/mpatxot/) </p>
-           <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) </p>
+           <p> :large_orange_diamond: [Christine Mazur](https://www.linkedin.com/in/christine-mazur-4b897425/) - IT Project Manager</p>
+           <p> :large_orange_diamond: [Elie Hakim](https://www.linkedin.com/in/hakime1/) - Data Analyst </p>
+           <p> :large_orange_diamond: [Jean Pino](https://www.linkedin.com/in/jeancpino/) - Data Analyst </p>
+           <p> :large_orange_diamond: [Jonathan Rinko](https://www.linkedin.com/in/jonathan-rinko/) - Data Analyst</p>
+           <p> :large_orange_diamond: [Miguel Patxot](https://www.linkedin.com/in/mpatxot/) - Data Analyst </p>
+           <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) - Software Partners Operations Specialist</p>
          </details>
 
 
