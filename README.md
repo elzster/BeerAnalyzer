@@ -1,4 +1,4 @@
-# <p align="center" style='color:red'> Project 3 - Beer Me...Something Different! </p>
+# <p align="center", style='color:red'> Project 3 - Beer Me...Something Different! </p>
 
 ### Beer Recommender Engine & Sentiment Analysis on Reviews
 
