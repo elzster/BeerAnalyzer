@@ -30,7 +30,10 @@ The Team : <details>
 # Data Process | Clean Up
 ![header image](/beer/readme_images/data_process.png)
 
+# Beer Review - Sentiment Analysis
+![sentiment analysis](https://beeranalyzer.herokuapp.com/sentiment/)
+
 # Beer Recommender Engine
 ![header image](/beer/readme_images/recommender_v2.png)
 
-This beer recommendation engine is built on collaborative-filtering approach. Since the review-rating matrix is very sparse, cosine similarity was suitable to calculate similarities between beers. This app recommends top 5 beers by taking user inputs and comparing against this pre-computed matrix.
+This beer recommendation engine is built on collaborative-filtering approach. Since the review-rating matrix is very sparse, cosine similarity was suitable to calculate similarities between beers. This app recommends top 5 beers by taking user inputs and comparing against this pre-computed matrix. 
