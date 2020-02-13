@@ -1,6 +1,6 @@
 # <p align="center"> Project 3 - Beer Me...Something Different! </p>
 
-### Beer Recommender Engine & Sentiment Analysis on Reviews
+### <p align="center"> Beer Recommender Engine & Sentiment Analysis on Reviews </p>
 
 The Team : <details>
            <summary>Beer Analysts + LinkedIn Profiles: </summary>
