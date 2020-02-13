@@ -1,12 +1,13 @@
 # Project 3 - Beer Me!
 
-## Beer Recommender Engine & Reviews Sentiment Analysis 
+## Beer Recommender Engine & Sentiment Analysis on Reviews 
 
 ![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
+
 ### -------------------------------------------------------------------------------------------
-### Bartender: What would you like to drink?
-### You: Not sure honestly...been drinking the same beer for quite some time; I want to try something new today.
-### Bartender: Perfect! Take a look at our "beer recommender", I'm sure you can find a new possibility of choices!
+### :beer: Bartender: What would you like to drink?
+### :mushroom: You: Not sure honestly...been drinking the same beer for quite some time; I want to try something new today.
+### :beer: Bartender: Perfect! Take a look at our "beer recommender", I'm sure you can find a new possibility of choices!
 ### -------------------------------------------------------------------------------------------
 
 ![header image](/beer/readme_images/welcome_page.png)
