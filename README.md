@@ -31,7 +31,8 @@ The Team : <details>
 ![header image](/beer/readme_images/data_process.png)
 
 # Beer Review - Sentiment Analysis
-![sentiment analysis](https://beeranalyzer.herokuapp.com/sentiment/)
+![header image](/beer/readme_images/vader_top.png)
+![header image](/beer/readme_images/vader_geo.png)
 
 # Beer Recommender Engine
 ![header image](/beer/readme_images/recommender_v2.png)
