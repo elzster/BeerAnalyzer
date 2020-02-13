@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3"></div>
+                    <div class="col-md-2"></div>
                     <div class="row justify-content-md-center">                    
                         <table class="table table-striped">
                             <tr>
@@ -104,7 +104,10 @@
                                     <h3><u>ABV%</u></h3>
                                 </th>
                                 <th>
-                                    <h3><u>Beer Style</u></h3>
+                                    <h3><center><u>Beer Style</u></center></h3>
+                                </th>
+                                <th>
+                                    <h3><u>Brewery</u></h3>
                                 </th>
                             </tr>
                             {% for i in case_list%}
@@ -113,6 +116,7 @@
                                 <td>{{ i.similarity }}</td>
                                 <td>{{ i.abv }}</td>
                                 <td>{{ i.style }}</td>
+                                <td>{{ i.brewery }}</td>
                             </tr>
                             {% endfor %}
                         </table>
@@ -128,7 +132,7 @@
                     <div class="row justify-content-md-center">
                         <form method="POST">
                             <select name="mybeer" onchange="this.form.submit()">
-                                {% for x,y in beerlist1.items() %}
+                                {% for x,y in beerlist1.items()|sort(attribute='1') %}
                                 <option value="{{ y }}">{{y}}</option>
                                 {% endfor %}
                             </select>
@@ -136,7 +140,6 @@
                     </div>
                 </div>
         </div>
-        </section>
     </div>
     </div>
     </section>
@@ -153,6 +156,7 @@
     <script src="/static/js/magnific-popup-options.js"></script>
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js"></script>
     <script src="/static/js/main.js"></script>
+    <script src="/static/js/sort.js"></script>
 
 </body>
 

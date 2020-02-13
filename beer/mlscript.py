@@ -14,7 +14,10 @@ df_5000 = pd.read_csv(cd+"/beer/static/df500.csv")
 # Helper function to get the title from the index
 def get_beerstyle_from_index (index):
     return df_5000[df_5000.index == index]["beer_style"].values[0]
-    
+
+def get_brewery_from_index (index):
+    return df_5000[df_5000.index == index]["brewery_name"].values[0]
+
 def get_title_from_index (index):
     return df_5000[df_5000.index == index]["beer_name"].values[0]
 
