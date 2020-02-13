@@ -18,7 +18,7 @@ The Team : <details>
 ### |-----------------------------------------------------------------------------------------|
 ### :beer: Bartender: What would you like to drink today?
 ### :mushroom: You: Not sure honestly...I've been drinking the same beer for quite some time; I want to try something new today...
-### :beer: Bartender: That's perfect! Take a look at our "beer analyzer", I'm sure you can find a possibility of new choices!
+### :beer: Bartender: That's perfect! Take a look at our 'Beer Analyzer App'; I'm sure you can find a possibility of information and new choices based on what you already like!
 ### |-----------------------------------------------------------------------------------------|
 
 # Welcome to the 'Beer Analyzer'!
@@ -31,6 +31,9 @@ The Team : <details>
 ![header image](/beer/readme_images/data_process.png)
 
 # Beer Review - Sentiment Analysis
+Vader - Valence Aware Dictionary and Sentiment Analysis 
+*Approximately 10k individual reviews web scraped using beautiful soup from 'Ratebeer.com' 
+*Objective is to compare review sentiment with actual rating provided by same users which rates each beer from 0-5.
 ![header image](/beer/readme_images/vader_top.png)
 ![header image](/beer/readme_images/vader_geo.png)
 
