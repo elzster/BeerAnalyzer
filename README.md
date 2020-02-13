@@ -1,5 +1,7 @@
 # Project 3 - Beer Me!
 
+### Beer Recommender Engine & Sentiment Analysis on Reviews
+
 The Team : <details>
            <summary>Beer Analysts + LinkedIn Profiles: </summary>
            <p> </p>
@@ -10,8 +12,6 @@ The Team : <details>
            <p> :large_orange_diamond: [Miguel Patxot](https://www.linkedin.com/in/mpatxot/) - Data Analyst </p>
            <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) - Software Partners Operations Specialist</p>
          </details>
-
-### Beer Recommender Engine & Sentiment Analysis on Reviews 
 
 ![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
 
