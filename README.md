@@ -15,12 +15,12 @@
 The Team : <details>
            <summary>Beer Analysts: </summary>
            <p> </p>
-           <p> :large_orange_diamond: - [Christine Mazur](#https://www.linkedin.com/in/christine-mazur-4b897425/)</p>
-           <p> :large_orange_diamond: Elie Hakim</p>
-           <p> :large_orange_diamond: Jean Pino</p>
-           <p> :large_orange_diamond: Jonathan Rinko</p>
-           <p> :large_orange_diamond: Miguel Patxot</p>
-           <p> :large_orange_diamond: Nida Hussain</p>
+           <p> :large_orange_diamond: Christine Mazur </p>
+           <p> :large_orange_diamond: Elie Hakim </p>
+           <p> :large_orange_diamond: Jean Pino </p>
+           <p> :large_orange_diamond: Jonathan Rinko </p>
+           <p> :large_orange_diamond: Miguel Patxot </p>
+           <p> :large_orange_diamond: Nida Hussain </p>
          </details>
 
 
