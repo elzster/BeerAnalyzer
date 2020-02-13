@@ -1,7 +1,7 @@
 # Project 3 - Beer Me!
 
 The Team : <details>
-           <summary>Beer Analysts & LinkedIn Profiles: </summary>
+           <summary>Beer Analysts + LinkedIn Profiles: </summary>
            <p> </p>
            <p> :large_orange_diamond: [Christine Mazur](https://www.linkedin.com/in/christine-mazur-4b897425/) - IT Project Manager</p>
            <p> :large_orange_diamond: [Elie Hakim](https://www.linkedin.com/in/hakime1/) - Data Analyst </p>
@@ -30,6 +30,7 @@ The Team : <details>
 # Data Process | Clean Up
 ![header image](/beer/readme_images/data_process.png)
 
-![header image](/beer/readme_images/ml_engine.png)
+# Beer Recommender Engine
+![header image](/beer/readme_images/recommender_v2.png)
 
 This beer recommendation engine is built on collaborative-filtering approach. Since the review-rating matrix is very sparse, cosine similarity was suitable to calculate similarities between beers. This app recommends top 5 beers by taking user inputs and comparing against this pre-computed matrix.
