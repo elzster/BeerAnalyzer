@@ -32,8 +32,8 @@ The Team : <details>
 
 # Beer Review - Sentiment Analysis
 Vader - Valence Aware Dictionary and Sentiment Analysis 
-*Approximately 10k individual reviews web scraped using beautiful soup from 'Ratebeer.com' 
-*Objective is to compare review sentiment with actual rating provided by same users which rates each beer from 0-5.
+* Approximately 10k individual reviews web scraped using beautiful soup from 'Ratebeer.com' 
+* Objective is to compare review sentiment with actual rating provided by same users which rates each beer from 0-5.
 ![header image](/beer/readme_images/vader_top.png)
 ![header image](/beer/readme_images/vader_geo.png)
 
