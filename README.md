@@ -1,6 +1,6 @@
 # Project 3 - Beer Me!
 
-## Beer Recommender Engine & Sentiment Analysis on Reviews 
+### Beer Recommender Engine & Sentiment Analysis on Reviews 
 
 ![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
 
