@@ -2,10 +2,17 @@
 
 ## Beer Recommender Engine & Reviews Sentiment Analysis 
 
+![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
+
+### Bartender: What would you like to drink?
+### You: Not sure honestly...been drinking the same beer for quite some time; I want to try something new today.
+### Bartender: Perfect! Take a look at our "beer recommender", I'm sure you can find a new possibility of choices!
+
 ![header image](/beer/readme_images/welcome_page.png)
 
 The Team : <details>
-           <summary>Beer Analysts</summary>
+           <summary>Beer Analysts: </summary>
+           <p> </p>
            <p> :small_orange_diamond: Christine Mazur</p>
            <p> :small_orange_diamond: Elie Hakim</p>
            <p> :small_orange_diamond: Jean Pino</p>
