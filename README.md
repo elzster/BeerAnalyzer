@@ -13,14 +13,14 @@
 ![header image](/beer/readme_images/welcome_page.png)
 
 The Team : <details>
-           <summary>Beer Analysts: </summary>
+           <summary>Beer Analysts & Linkedin Profiles: </summary>
            <p> </p>
            <p> :large_orange_diamond: [Christine Mazur](https://www.linkedin.com/in/christine-mazur-4b897425/) </p>
-           <p> :large_orange_diamond: Elie Hakim </p>
-           <p> :large_orange_diamond: Jean Pino </p>
-           <p> :large_orange_diamond: Jonathan Rinko </p>
-           <p> :large_orange_diamond: Miguel Patxot </p>
-           <p> :large_orange_diamond: Nida Hussain </p>
+           <p> :large_orange_diamond: [Elie Hakim](https://www.linkedin.com/in/hakime1/) </p>
+           <p> :large_orange_diamond: [Jean Pino](https://www.linkedin.com/in/jeancpino/) </p>
+           <p> :large_orange_diamond: [Jonathan Rinko](https://www.linkedin.com/in/jonathan-rinko/) </p>
+           <p> :large_orange_diamond: [Miguel Patxot](https://www.linkedin.com/in/mpatxot/) </p>
+           <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) </p>
          </details>
 
 
