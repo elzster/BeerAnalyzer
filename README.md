@@ -1,17 +1,5 @@
 # Project 3 - Beer Me!
 
-### Beer Recommender Engine & Sentiment Analysis on Reviews 
-
-![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
-
-### |-----------------------------------------------------------------------------------------|
-### :beer: Bartender: What would you like to drink?
-### :mushroom: You: Not sure honestly...been drinking the same beer for quite some time; I want to try something new today.
-### :beer: Bartender: Perfect! Take a look at our "beer recommender", I'm sure you can find a new possibility of choices!
-### |-----------------------------------------------------------------------------------------|
-
-![header image](/beer/readme_images/welcome_page.png)
-
 The Team : <details>
            <summary>Beer Analysts & LinkedIn Profiles: </summary>
            <p> </p>
@@ -23,9 +11,23 @@ The Team : <details>
            <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) - Software Partners Operations Specialist</p>
          </details>
 
+### Beer Recommender Engine & Sentiment Analysis on Reviews 
 
+![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
+
+### |-----------------------------------------------------------------------------------------|
+### :beer: Bartender: What would you like to drink today?
+### :mushroom: You: Not sure honestly...I've been drinking the same beer for quite some time; I want to try something new today...
+### :beer: Bartender: That's perfect! Take a look at our "beer analyzer", I'm sure you can find a possibility of new choices!
+### |-----------------------------------------------------------------------------------------|
+
+# Welcome to the 'Beer Analyzer'!
+![header image](/beer/readme_images/welcome_page.png)
+
+# Our Mission
 ![header image](/beer/readme_images/our_mission_.png)
 
+# Data Process | Clean Up
 ![header image](/beer/readme_images/data_process.png)
 
 ![header image](/beer/readme_images/ml_engine.png)
