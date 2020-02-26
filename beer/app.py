@@ -14,7 +14,7 @@ from flask import json
 from flask import url_for
 from sqlalchemy import func
 from sqlalchemy import or_
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+# from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement, get_abv_from_index, get_beerstyle_from_index, get_brewery_from_index 
