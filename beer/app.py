@@ -93,7 +93,7 @@ def beer_input(beer):
         beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
         sim_score.append(sorted_similar_beers[i][1])
         abv_score.append(get_abv_from_index(sorted_similar_beers[i][0]))
-        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])), 'style':(get_beerstyle_from_index((sorted_similar_beers[i][0]))), 'brewery':(get_brewery_from_index((sorted_similar_beers[i][0]))) }
+        case = {'beer': get_title_from_index(sorted_similar_beers[i][0]), 'similarity': (sorted_similar_beers[i][1]).round(2), 'abv':(get_abv_from_index(sorted_similar_beers[i][0])), 'style':(get_beerstyle_from_index((sorted_similar_beers[i][0]))), 'brewery':(get_brewery_from_index((sorted_similar_beers[i][0]))) }
         case_list.append(case)
         if i>=4:
             break
