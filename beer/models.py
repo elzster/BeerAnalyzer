@@ -1,8 +1,11 @@
+#import the database information from the app.py file.
 from .app import db
 
+#define the schema to read the table from the database from
 class beerdata(db.Model):
     __tablename__ = 'brew_data'
 
+#define the columns
     id = db.Column(db.Integer, primary_key=True)
     brewery_id = db.Column(db.Text)
     brewery_name = db.Column(db.Text)

@@ -86,7 +86,7 @@ sorted_similar_beers = sorted(similar_beers,key = lambda x:x[1], reverse = True)
 i=0
 beer_dict = []
 sim_score = []
-print(f"The top 5 beers similar to {beer_user_likes} are: ")
+# print(f"The top 5 beers similar to {beer_user_likes} are: ")
 for i in range(len(sorted_similar_beers)):
     beer_dict.append(get_title_from_index(sorted_similar_beers[i][0]))
     sim_score.append(sorted_similar_beers[i][1])
@@ -95,5 +95,5 @@ for i in range(len(sorted_similar_beers)):
 # print(beer_dict)
 # print(sim_score)
 mydict = dict(zip(beer_dict, sim_score))
-print(mydict)
+# print(mydict)
 
