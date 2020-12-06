@@ -1,3 +1,6 @@
+
+
+from beer import app
 # import necessary libraries
 from flask import (Flask,render_template,jsonify,request,redirect,url_for)
 import pandas as pd
@@ -9,41 +12,17 @@ import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from time import sleep
 from flask import json
+
 #Machine Learning Bits Imported into Flask Server
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from .mlscript import similarity_model, get_title_from_index, get_index_from_title,print_statement, get_abv_from_index, get_beerstyle_from_index, get_brewery_from_index 
+# app = Flask(__name__)
 
-#################################################
-# Flask Setup
-#################################################
-app = Flask(__name__)
-app.config.from_object(__name__)
-app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-
-#################################################
-# Database Setup
-#################################################
-import os 
-cd = os.getcwd()
-
-from sqlalchemy.orm import sessionmaker
-
-#Database Variables
-#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/brew.sqlite"
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:postgres@localhost/beer_data"
-db = SQLAlchemy(app)
-from .models import beerdata
-Base = automap_base()
-Base.prepare(db.engine, reflect=True)
-
-# ###############################################
-# #########Html Routes for Web Server ###########
-# ###############################################
-# from beer import views
-
-###Landing Page####
+###############################################
+#########Html Routes for Web Server ###########
+###############################################
+####Landing Page####
 @app.route("/")
 def index():
 
@@ -184,6 +163,3 @@ def beer_input1():
     result2 = dict(zip(beer_dict, abv_score))
 
     return render_template("finaltable.html", result=result, result2=result2, beer_user_likes=beer_user_likes, beerlist1=beerlist1, case_list=case_list)
-
-if __name__ == "__main__":
-    app.run(debug=True)
