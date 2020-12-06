@@ -7,7 +7,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
-
+from time import sleep
+from flask import json
 #Machine Learning Bits Imported into Flask Server
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -27,17 +28,22 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 import os 
 cd = os.getcwd()
 
+from sqlalchemy.orm import sessionmaker
+
 #Database Variables
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/brew.sqlite"
+#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/brew.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:postgres@localhost/beer_data"
 db = SQLAlchemy(app)
 from .models import beerdata
 Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 
-###############################################
-#########Html Routes for Web Server ###########
-###############################################
-####Landing Page####
+# ###############################################
+# #########Html Routes for Web Server ###########
+# ###############################################
+# from beer import views
+
+###Landing Page####
 @app.route("/")
 def index():
 
@@ -58,6 +64,42 @@ def analysis():
 @app.route("/sentiment/")
 def sentiment():
     return render_template("sentiment.html")
+
+@app.route("/slow/<inputfield>")
+def slow_input(inputfield):
+    result = {}
+
+    Session = sessionmaker(bind = db.engine)
+    session = Session()
+    
+    WebCache = Base.classes["web_cache"]
+    url = "/slow/"+ inputfield
+    # check the database for the response
+    found = session.query(WebCache.id).filter_by(url=url).count()
+    # if found return response right away
+    if(found > 0):
+        record = session.query(WebCache).filter_by(url=url).first()
+        result = json.loads(record.response)
+        return render_template("slowpage.html", result=result)
+        # otherwise do the critical section
+    else:
+        # this section is the critical section
+        sleep(30)
+        result["input"] = inputfield
+        # ******* end of critical section ******
+
+        
+        resp = json.dumps(result)
+
+        # c1 = Customers(name = 'Ravi Kumar', address = 'Station Road Nanded', email = 'ravi@gmail.com')
+        # print(Base.metadata.tables.keys())
+        # print(Base.classes.keys())
+
+        loaded = WebCache(url=url, response=resp)
+        session.add(loaded)
+        session.commit()
+    
+    return render_template("slowpage.html", result=result)
 
 
 #Default Route that is Loaded Up into Script "Waschusett Larry"
@@ -144,4 +186,4 @@ def beer_input1():
     return render_template("finaltable.html", result=result, result2=result2, beer_user_likes=beer_user_likes, beerlist1=beerlist1, case_list=case_list)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
