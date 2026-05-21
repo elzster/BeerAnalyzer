@@ -13,8 +13,6 @@ The Team : <details>
            <p> :large_orange_diamond: [Nida Hussain](https://www.linkedin.com/in/nida-hussain-0b009932/) - Software Partners Operations Specialist</p>
          </details>
 
-![header image](https://anigamers.com/uploads/entries/Bartender2_20150404224430.jpg)
-
 ### |-----------------------------------------------------------------------------------------|
 ### :beer: Bartender: What would you like to drink today?
 ### :mushroom: You: Not sure honestly...I've been drinking the same beer for quite some time; I want to try something new today...
