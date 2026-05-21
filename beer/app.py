@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 CSV_PATH = BASE_DIR / "static" / "df500.csv"
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "7d441f27d441f27567d441f2b6176a"
+app.config["SECRET_KEY"] = "beer-analyzer-secret-key"
 
 
 def get_beer_list():
@@ -19,7 +19,7 @@ def get_beer_list():
     if "beer_name" not in beerlist.columns:
         raise ValueError("df500.csv must contain a 'beer_name' column.")
 
-    return beerlist["beer_name"]
+    return sorted(beerlist["beer_name"].dropna().unique())
 
 
 def render_recommendations(beer_name="Wachusett Larry"):
@@ -28,9 +28,12 @@ def render_recommendations(beer_name="Wachusett Larry"):
     try:
         case_list = recommender.recommend(beer_name, limit=5)
         error = None
-    except ValueError:
+    except Exception:
         case_list = []
-        error = f"Beer '{beer_name}' was not found. Please choose a beer from the list."
+        error = (
+            f"Beer '{beer_name}' was not found. "
+            f"Please choose a beer from the list."
+        )
 
     result = {item["beer"]: item["similarity"] for item in case_list}
     result2 = {item["beer"]: item["abv"] for item in case_list}
@@ -78,7 +81,7 @@ def beer_default():
 
 @app.route("/beer/", methods=["POST"])
 def beer_input():
-    beer_name = request.form.get("mybeer", "Wachusett Larry").strip()
+    beer_name = request.form.get("mybeer", "").strip()
 
     if not beer_name:
         beer_name = "Wachusett Larry"
@@ -86,5 +89,10 @@ def beer_input():
     return render_recommendations(beer_name)
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("index.html"), 404
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
