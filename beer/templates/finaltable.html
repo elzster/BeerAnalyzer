@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Beer Analyzer &mdash; Project 3 </title>
+    <title>Beer Analyzer &mdash; Project 3</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/bootstrap.css">
     <link rel="stylesheet" href="/static/css/animate.css">
@@ -22,34 +23,46 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">Beer Analyzer</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarsExample05" aria-controls="navbarsExample05"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
                         <li class="nav-item">
                             <a class="nav-link active" href="/">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="/scope/">Scope</a>
                         </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/analysis/" id="dropdown04" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Analysis</a>
+                            <a class="nav-link dropdown-toggle" href="/analysis/" id="dropdown04"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analysis
+                            </a>
+
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
                                 <a class="dropdown-item" href="/analysis/">Dataset Overview</a>
                                 <a class="dropdown-item" href="/sentiment/">Sentiment Analysis</a>
                                 <a class="dropdown-item" href="/beer/">Recommender</a>
                             </div>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="/analyst/">Analyst Team</a>
                         </li>
                     </ul>
+
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item cta-btn">
-                            <a class="nav-link" href="https://github.com/elzster/project3">GitHub</a>
+                            <a class="nav-link" href="https://github.com/elzster/BeerAnalyzer">
+                                GitHub
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -61,98 +74,103 @@
         <div class="slider-item" style="background-image: url('/static/img/beer1.png');">
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-md-8 text-center col-sm-12 ">
-                        <h1 data-aos="fade-up"><a href='#table'>Recommender Model</a></h1>
-                        <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Here is an example of our Recommender
-                            App. For Demo Purposes we did have to take our machine model sample smaller for speed.
-                            We developed a machine learning model that took the sample of the dataset and placed the
-                            sample beers in a similarity matrix.<br>
-                            Below is a table of Top Five Beers with a Default Beer Value set at 'Wachusett Larry'.
+                    <div class="col-md-8 text-center col-sm-12">
+                        <h1 data-aos="fade-up">
+                            <a href="#table">Recommender Model</a>
+                        </h1>
+
+                        <p class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                            Here is an example of our Recommender App. For demo purposes,
+                            we used a smaller machine learning sample for speed. The model
+                            compares beers using a similarity matrix and returns the top
+                            five most similar beers.
+                            <br>
+                            Below is a table of top five beers with a default beer value set
+                            at <strong>Wachusett Larry</strong>.
                         </p>
-                        <br>
                     </div>
                 </div>
             </div>
-            <section class="section bg-light pt-0 bottom-slant-gray">
-                <div class="col-md-12">
-                    <div id="table"></div>
-                    <div class="row justify-content-md-center">
-                        <div class="clearfix mb-5 pb-5">
-                            <div class="container-fluid">
-                                <div class="row" data-aos="fade">
-                                    <div class="col-md-12 text-center heading-wrap">
-                                        <h2>Top Five Beers Similar To: <br>
-                                            <u>{{ beer_user_likes }}</u></h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        </div>
+    </div>
+
+    <section class="section bg-light pt-5 bottom-slant-gray">
+        <div class="container" id="table">
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-12 text-center heading-wrap mb-5">
+                    <h2>
+                        Top Five Beers Similar To:
+                        <br>
+                        <u>{{ beer_user_likes }}</u>
+                    </h2>
+                </div>
+            </div>
+
+            {% if error %}
+            <div class="row justify-content-md-center">
+                <div class="col-md-8">
+                    <div class="alert alert-danger text-center">
+                        {{ error }}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="row justify-content-md-center">
-                        <table class="table table-striped">
-                            <tr>
-                                <th>
-                                    <h3>
-                                        <center><u>Beer</u></center>
-                                    </h3>
-                                </th>
-                                <th>
-                                    <h3><u>Rating %</u></h3>
-                                </th>
-                                <th>
-                                    <h3><u>ABV%</u></h3>
-                                </th>
-                                <th>
-                                    <h3>
-                                        <center><u>Beer Style</u></center>
-                                    </h3>
-                                </th>
-                                <th>
-                                    <h3><u>Brewery</u></h3>
-                                </th>
-                            </tr>
-                            {% for i in case_list%}
-                            <tr>
-                                <th style = text-align:center>{{ i.beer }} </th>
-                                <td style = text-align:center>{{ i.similarity }} %</td>
-                                <td>{{ i.abv }}</td>
-                                <td>{{ i.style }}</td>
-                                <td>{{ i.brewery }}</td>
-                            </tr>
-                            {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered text-center">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Beer</th>
+                                    <th>Rating</th>
+                                    <th>ABV%</th>
+                                    <th>Beer Style</th>
+                                    <th>Brewery</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for beer in case_list %}
+                                <tr>
+                                    <td>{{ beer.beer }}</td>
+                                    <td>{{ beer.similarity }}</td>
+                                    <td>{{ beer.abv }}</td>
+                                    <td>{{ beer.style }}</td>
+                                    <td>{{ beer.brewery }}</td>
+                                </tr>
+                                {% else %}
+                                <tr>
+                                    <td colspan="5">
+                                        No recommendations available.
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- <div class="row justify-content-md-center">
-                        <form method="POST">
-                            <input name="mybeer">
-                            <input type="submit">
-                        </form>
-                    </div> -->
-                    <div class="col-md-4-center">
-                        <div class="row justify-content-md-center">
-                            <p>Try Another Beer:</p>
-                        <br></div></div>
-                <div class="col-md-4-center">
-                    <div class="row justify-content-md-center">
-                        <form method="POST">
-                            <select name="mybeer" onchange="this.form.submit()">
-                                {% for x,y in beerlist1.items()|sort(attribute='1') %}
-                                <option value="{{ y }}">{{y}}</option>
-                                {% endfor %}
-                            </select>
-                        </form>
-                    </div>
+            </div>
+
+            <div class="row justify-content-md-center mt-4">
+                <div class="col-md-6 text-center">
+                    <p><strong>Try Another Beer:</strong></p>
+
+                    <form method="POST" action="/beer/">
+                        <select name="mybeer" class="form-control" onchange="this.form.submit()">
+                            {% for beer in beerlist1 %}
+                            <option value="{{ beer }}" {% if beer == beer_user_likes %}selected{% endif %}>
+                                {{ beer }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </form>
                 </div>
+            </div>
+
         </div>
-    </div>
-    </div>
     </section>
-    </div>
-    </div>
 
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/popper.min.js"></script>
@@ -162,9 +180,7 @@
     <script src="/static/js/aos.js"></script>
     <script src="/static/js/jquery.magnific-popup.min.js"></script>
     <script src="/static/js/magnific-popup-options.js"></script>
-    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.2.2.min.js"></script>
     <script src="/static/js/main.js"></script>
-
 </body>
 
 </html>
